@@ -6,4 +6,6 @@ def question(request):
         request %= c
     return count
 
-print(question(1260))
+print("값을 입력하세요.")
+print(question(int(input())))
+# https://github.com/e3hope/Algorithm

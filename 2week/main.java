@@ -2,17 +2,20 @@ import java.io.*;
 
 public class main {
     public static void main(String[] args) {
-        System.out.println(question(1260));
+        System.out.println("값을입력하세요");
+        Scanner scan = new Scanner(System.in);
+        int request = scan.nextInt();
+        System.out.println(question(request));
     }
     public static int question(int request)
     {
-        int n = 1260;
-        int cnt = 0;
+        int count = 0;
         int[] coinTypes = {500, 100, 50, 10};
         for (int i = 0; i < 4; i++) {
-           cnt += n / coinTypes[i];
-            n %= coinTypes[i];
+            count += request / coinTypes[i];
+            request %= coinTypes[i];
         }
-        return cnt;
+        return count;
     }
 }
+// https://github.com/e3hope/Algorithm
